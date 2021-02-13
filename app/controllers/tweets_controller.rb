@@ -30,6 +30,13 @@ class TweetsController < ApplicationController
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @tweet.errors, status: :unprocessable_entity }
+        format.turbo_stream {
+          render turbo_stream: turbo_stream.replace(
+            @tweet,
+            partial: "tweets/form",
+            locals: { tweet: @tweet }
+          )
+        }
       end
     end
   end
@@ -64,6 +71,6 @@ class TweetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tweet_params
-      params.fetch(:tweet, {})
+      params.require(:tweet).permit(:content)
     end
 end

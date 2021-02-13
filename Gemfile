@@ -5,9 +5,11 @@ ruby '3.0.0'
 
 gem 'rails', '~> 6.1.2.1', '>= 6.1.2.1'
 gem 'pg', '~> 1.2.3'
+gem 'redis-rails', "~> 5.0.2"
 gem 'puma', '~> 5.2.1'
 gem 'sass-rails', '~> 6.0.0'
 gem 'webpacker', '~> 5.2.1'
+gem 'tailwindcss-rails', "~> 0.3.3"
 
 gem 'hotwire-rails', "~> 0.1.3"
 gem 'jbuilder', '~> 2.11.2'

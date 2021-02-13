@@ -1,0 +1,17 @@
+<%= turbo_frame_tag dom_id(tweet) do %>
+  <div class="p-4">
+    <%= tweet.content %>
+
+    <div class="my-1">
+      <%= link_to 'Show', tweet %>
+
+      <%= link_to 'Edit', edit_tweet_path(tweet) %>
+
+      <%= link_to 'Destroy',
+        tweet,
+        method: :delete,
+        data: { confirm: 'Are you sure?' }
+      %>
+    </div>
+  </div>
+<% end %>
