@@ -8,7 +8,7 @@ gem 'pg', '~> 1.2.3'
 gem 'puma', '~> 5.2.1'
 gem 'sass-rails', '~> 6.0.0'
 gem 'webpacker', '~> 5.2.1'
-gem 'turbolinks', '~> 5.2.1'
+
 gem 'hotwire-rails', "~> 0.1.3"
 gem 'jbuilder', '~> 2.11.2'
 gem 'bootsnap', '~> 1.7.2', require: false
