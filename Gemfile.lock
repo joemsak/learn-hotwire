@@ -77,6 +77,10 @@ GEM
     ffi (1.14.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    hotwire-rails (0.1.3)
+      rails (>= 6.0.0)
+      stimulus-rails
+      turbo-rails
     i18n (1.8.9)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.2)
@@ -186,9 +190,13 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stimulus-rails (0.2.3)
+      rails (>= 6.0.0)
     thor (1.1.0)
     tilt (2.0.10)
     trollop (2.9.10)
+    turbo-rails (0.5.9)
+      rails (>= 6.0.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -213,23 +221,24 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootsnap (>= 1.4.4)
-  factory_bot_rails
-  jbuilder (~> 2.7)
-  listen (~> 3.3)
-  pessimize
-  pg (~> 1.1)
-  pry-rails
-  puma (~> 5.0)
-  rack-mini-profiler (~> 2.0)
-  rails (~> 6.1.2, >= 6.1.2.1)
-  rspec-rails
-  sass-rails (>= 6)
-  spring
-  turbolinks (~> 5)
+  bootsnap (~> 1.7.2)
+  factory_bot_rails (~> 6.1.0)
+  hotwire-rails (~> 0.1.3)
+  jbuilder (~> 2.11.2)
+  listen (~> 3.4.1)
+  pessimize (~> 0.4.0)
+  pg (~> 1.2.3)
+  pry-rails (~> 0.3.9)
+  puma (~> 5.2.1)
+  rack-mini-profiler (~> 2.3.1)
+  rails (~> 6.1.2.1, >= 6.1.2.1)
+  rspec-rails (~> 4.0.2)
+  sass-rails (~> 6.0.0)
+  spring (~> 2.1.1)
+  turbolinks (~> 5.2.1)
   tzinfo-data
-  web-console (>= 4.1.0)
-  webpacker (~> 5.0)
+  web-console (~> 4.1.0)
+  webpacker (~> 5.2.1)
 
 RUBY VERSION
    ruby 3.0.0p0
