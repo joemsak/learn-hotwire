@@ -10,14 +10,13 @@
   </thead>
 
   <div class="d-flex">
-    <%= turbo_stream_from "tweets" %>
+    <%= turbo_frame_tag :tweet_form do %>
+      <%= render "form", tweet: @tweet %>
+    <% end %>
 
-    <%= turbo_frame_tag "tweets" do %>
+    <%= turbo_stream_from :tweets %>
+    <%= turbo_frame_tag :tweets do %>
       <%= render @tweets %>
     <% end %>
   </div>
 </table>
-
-<br>
-
-<%= link_to 'New Tweet', new_tweet_path %>

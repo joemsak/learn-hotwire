@@ -2,7 +2,8 @@
 
 <%= turbo_frame_tag dom_id(@tweet) do %>
   <%= render 'form', tweet: @tweet %>
+
+  <%= link_to "Cancel", @tweet %>
 <% end %>
 
-<%= link_to 'Show', @tweet %> |
 <%= link_to 'Back', tweets_path %>
