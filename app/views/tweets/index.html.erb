@@ -2,14 +2,12 @@
 
 <h1>Tweets</h1>
 
-<div class="d-flex">
-  <%= turbo_frame_tag :tweet_form do %>
-    <%= render "form", tweet: @tweet %>
-  <% end %>
+<%= turbo_frame_tag :tweet_form do %>
+  <%= render "form", tweet: @tweet %>
+<% end %>
 
-  <%= turbo_stream_from :tweets %>
+<%= turbo_stream_from :tweets %>
 
-  <%= turbo_frame_tag :tweets do %>
-    <%= render @tweets %>
-  <% end %>
-</div>
+<%= turbo_frame_tag :tweets do %>
+  <%= render @tweets %>
+<% end %>
